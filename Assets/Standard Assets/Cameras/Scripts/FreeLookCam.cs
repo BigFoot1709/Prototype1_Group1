@@ -44,10 +44,12 @@ namespace UnityStandardAssets.Cameras
         protected void Update()
         {
             HandleRotationMovement();
+            Cursor.lockState = CursorLockMode.Locked;
+
             if (m_LockCursor && Input.GetMouseButtonUp(0))
             {
-                Cursor.lockState = m_LockCursor ? CursorLockMode.Locked : CursorLockMode.None;
-                Cursor.visible = !m_LockCursor;
+                //Cursor.lockState = m_LockCursor ? CursorLockMode.Locked : CursorLockMode.None;
+                //Cursor.visible = !m_LockCursor;
             }
         }
 
@@ -73,8 +75,8 @@ namespace UnityStandardAssets.Cameras
 			return;
 
             // Read the user input
-            var x = CrossPlatformInputManager.GetAxis("Mouse X");
-            var y = CrossPlatformInputManager.GetAxis("Mouse Y");
+            var x = CrossPlatformInputManager.GetAxis("PS4_RightAnalogHorizontal");
+            var y = CrossPlatformInputManager.GetAxis("PS4_RightAnalogVertical");
 
             // Adjust the look angle by an amount proportional to the turn speed and horizontal input.
             m_LookAngle += x*m_TurnSpeed;
@@ -93,7 +95,7 @@ namespace UnityStandardAssets.Cameras
             else
             {
                 // on platforms with a mouse, we adjust the current angle based on Y mouse input and turn speed
-                m_TiltAngle -= y*m_TurnSpeed;
+                m_TiltAngle += y*m_TurnSpeed;
                 // and make sure the new value is within the tilt range
                 m_TiltAngle = Mathf.Clamp(m_TiltAngle, -m_TiltMin, m_TiltMax);
             }
