@@ -122,7 +122,7 @@ public class DialogueBox : MonoBehaviour
                 
                 for (int i = 0; i < numChoices; i++)
                 {
-                    GameObject currChoice = Utilities.SearchChild("ChoiceButton" + i, this.gameObject);
+                    GameObject currChoice = GameObject.Find("Option" + i);
                     ModifyChoice(i, currChoice, currNode);
                 }
             }
@@ -152,7 +152,7 @@ public class DialogueBox : MonoBehaviour
         {
             for (int i = 0; i < numChoices; i++)
             {
-                GameObject currChoice = Utilities.SearchChild("ChoiceButton" + i, this.gameObject);
+                GameObject currChoice = GameObject.Find("Option" + i);
                 currChoice.SetActive(true);
             }
         }
