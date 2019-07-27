@@ -530,8 +530,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   progressDisplay: {fileID: 131471829}
   progress: 0
-  totalToSucceed: 100
-  weight: 5
+  totalToSucceed: 12
+  weight: 1
 --- !u!1 &1896551607
 GameObject:
   m_ObjectHideFlags: 0

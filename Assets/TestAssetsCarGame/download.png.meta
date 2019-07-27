@@ -1,11 +1,7 @@
 fileFormatVersion: 2
-guid: 0147a410d122e2347ba673ffa954ceb1
+guid: c903bea118acf444a932563d1fc48f35
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: Circle
-    21300002: Square
-    21300004: Triangle
-    21300006: Cross
+  fileIDToRecycleName: {}
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -44,7 +40,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -141,91 +137,11 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Circle
-      rect:
-        serializedVersion: 2
-        x: 511
-        y: 628
-        width: 425
-        height: 424
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a23c24083eafb454b9d0efdbe81881a5
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Square
-      rect:
-        serializedVersion: 2
-        x: 1471
-        y: 586
-        width: 419
-        height: 419
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 52fa95d0544037d4abe852984e4b1e0c
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Triangle
-      rect:
-        serializedVersion: 2
-        x: 28
-        y: 103
-        width: 480
-        height: 414
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8e3c805f9a6503f47acf7caecec94204
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cross
-      rect:
-        serializedVersion: 2
-        x: 1003
-        y: 63
-        width: 418
-        height: 419
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dda0ea35f12db9a48aa87a079790065a
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 8448088ba717b3246a81b6db4609f6b9
+    spriteID: 
     vertices: []
     indices: 
     edges: []

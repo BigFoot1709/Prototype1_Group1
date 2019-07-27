@@ -24,9 +24,9 @@ public class AnalogCombos : MonoBehaviour
     void Update()
     {
         if (Input.GetButton("Submit")) {
-            StartCombo();
+            //StartCombo();
         } else if (Input.GetKeyDown(KeyCode.Y)) {
-            StartCombo(false);
+            //StartCombo(false);
         }
         if (checkingCombo) {
             Vector2 inputVector = new Vector2 (Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
