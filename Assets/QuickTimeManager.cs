@@ -12,6 +12,7 @@ public class QuickTimeManager : MonoBehaviour
     public UnityEvent m_OnFailure;
 
     private bool _QTEInProgress;
+    private bool _callQuickTimeEvent;
 
     void Start()
     {
@@ -28,7 +29,7 @@ public class QuickTimeManager : MonoBehaviour
         }
 
         _QTEInProgress = false;
-        CallQuickTimeEvent();
+        //CallQuickTimeEvent();
     }
 
     // Update is called once per frame
@@ -104,6 +105,7 @@ public class QuickTimeManager : MonoBehaviour
         {
             this.transform.GetChild(i).gameObject.SetActive(false);
         }
+        _QTEInProgress = false;
     }
 
     public void Show()

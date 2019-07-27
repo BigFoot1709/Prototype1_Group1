@@ -52,7 +52,7 @@ public class ChoicesCanvas : MonoBehaviour
 
         foreach (OptionEventSetter e in eventSetters)
         {
-            if (e.GetName().ToUpper().Contains(choiceName.ToUpper()))
+            if (e.GetName().ToUpper().Equals(choiceName.ToUpper()))
             {
                 returnEvents = e;
             }
