@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class InteractableObject : MonoBehaviour
 {
@@ -22,6 +23,8 @@ public class InteractableObject : MonoBehaviour
     private static List<GameObject> _interactableObjects;
     private GameObject _focusCamera;
 
+    public UnityEvent m_OnZoomFinished;
+
     private void Awake()
     {
         _interactableObjects = new List<GameObject>();
@@ -42,6 +45,11 @@ public class InteractableObject : MonoBehaviour
         foreach (GameObject g in _interactableObjects)
         {
             print("Object: " + g.name + "\n");
+        }
+
+        if (m_OnZoomFinished == null)
+        {
+            m_OnZoomFinished = new UnityEvent();
         }
     }
 
@@ -90,6 +98,7 @@ public class InteractableObject : MonoBehaviour
             print(gameObject.name);        
             _focusCamera.GetComponent<Camera>().enabled = true;
             GameObject.Find("FreeLookCameraRig").SetActive(false);
+            _focusCamera.GetComponent<FocusCamera>().ChangeFinishedZoomEvent(m_OnZoomFinished);
             _focusCamera.GetComponent<FocusCamera>().FocusOnObject(this.gameObject.transform);
             ClearClicks();
         }
@@ -177,5 +186,10 @@ public class InteractableObject : MonoBehaviour
 
         GameObject.Find("AudioManager").GetComponents<AudioSource>()[0].volume = 0;
         GameObject.Find("AudioManager").GetComponents<AudioSource>()[1].volume = 0;
+    }
+
+    public void ChangeOnZoomFinishedEvent(UnityEvent zoom)
+    {
+        m_OnZoomFinished = zoom;
     }
 }

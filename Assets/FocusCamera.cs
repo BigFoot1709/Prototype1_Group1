@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class FocusCamera : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class FocusCamera : MonoBehaviour
     private GameObject _freeLookCamera;
     private Transform _originalTransform;
 
+    private UnityEvent m_OnZoomFinished;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +27,11 @@ public class FocusCamera : MonoBehaviour
         _originalTransform = this.GetComponent<Transform>();
         _startZoom = false;
         _freeLookCamera = GameObject.Find("FreeLookCameraRig");
+
+        if (m_OnZoomFinished == null)
+        {
+            m_OnZoomFinished = new UnityEvent();
+        }
     }
 
     // Update is called once per frame
@@ -54,6 +62,7 @@ public class FocusCamera : MonoBehaviour
             } else
             {
                 _startZoom = false;
+                m_OnZoomFinished.Invoke();
             }
         }
 
@@ -89,4 +98,8 @@ public class FocusCamera : MonoBehaviour
         }
     }
 
+    public void ChangeFinishedZoomEvent(UnityEvent zoomFinished)
+    {
+        m_OnZoomFinished = zoomFinished;
+    }
 }

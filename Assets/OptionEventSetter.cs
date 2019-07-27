@@ -41,6 +41,22 @@ public class OptionEventSetter : MonoBehaviour
         Utilities.SearchChild("CircleText", optionO).GetComponent<Text>().text = choiceOText;
         Utilities.SearchChild("SquareText", optionSquare).GetComponent<Text>().text = choiceSquareText;
 
+        if (choiceSquareText == "")
+        {
+            optionSquare.SetActive(false);
+        }
+
+        if (choiceOText == "")
+        {
+            optionO.SetActive(false);
+        }
+
+        if (choiceXText == "")
+        {
+            optionX.SetActive(false);
+        }
+
+
         optionX.GetComponent<Option>().ChangeEvent(m_OptionX);
         optionO.GetComponent<Option>().ChangeEvent(m_OptionO);
         optionSquare.GetComponent<Option>().ChangeEvent(m_OptionSquare);
