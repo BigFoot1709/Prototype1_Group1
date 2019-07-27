@@ -21,8 +21,14 @@ public class ChangeHandcuffEvent : MonoBehaviour
     {
         if (GameObject.Find("clipobject") == null)
         {
-            this.GetComponent<InteractableObject>().ChangeOnZoomFinishedEvent(m_ChangeEvent);
-            Destroy(this);
-        }
+            //this.GetComponent<InteractableObject>().ChangeOnZoomFinishedEvent(m_ChangeEvent);
+            //Destroy(this);
+        } 
+    }
+
+    public void ChangeHandcuffOnZoomFinishedEvent()
+    {
+        this.GetComponent<InteractableObject>().ChangeOnZoomFinishedEvent(m_ChangeEvent);
+        //Destroy(this);
     }
 }

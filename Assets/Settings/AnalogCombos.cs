@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class AnalogCombos : MonoBehaviour
 {
+
+    public UnityEvent m_OnAnalogGameDone;
 
     private int[] clockwise = {0,1,2,3,4,5,6,-5,-4,-3,-2,-1};
     private int[] anticlockwise = {0,-1,-2,-3,-4,-5,6,5,4,3,2,1};
@@ -23,7 +26,7 @@ public class AnalogCombos : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButton("Submit")) {
+        if (Input.GetKeyDown(KeyCode.G)) {
             //StartCombo();
         } else if (Input.GetKeyDown(KeyCode.Y)) {
             //StartCombo(false);
@@ -63,9 +66,11 @@ public class AnalogCombos : MonoBehaviour
             }
         }
 
-       
-
-
+        if (progressDisplay.GetComponent<Image>().fillAmount >= 1)
+        {
+            progressDisplay.GetComponent<Image>().fillAmount = 0;
+            m_OnAnalogGameDone.Invoke();  
+        }
         
     }
 
@@ -87,5 +92,10 @@ public class AnalogCombos : MonoBehaviour
         }
         score /= 12;
         return score;        
+    }
+
+    public void ChangeGameDoneEvent(UnityEvent gameDone)
+    {
+        m_OnAnalogGameDone = gameDone;
     }
 }

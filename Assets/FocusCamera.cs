@@ -66,10 +66,10 @@ public class FocusCamera : MonoBehaviour
             }
         }
 
-        if (Input.GetButtonDown("Cancel"))
-        {
-            ReturnToMainView();
-        }
+        //if (Input.GetButtonDown("Cancel"))
+        //{
+        //    ReturnToMainView();
+        //}
     }
 
     public void FocusOnObject(Transform newZoomObject)
@@ -90,6 +90,7 @@ public class FocusCamera : MonoBehaviour
 
     public void ReturnToMainView()
     {
+        GameObject.Find("ChoicesCanvas").GetComponent<ChoicesCanvas>().Hide();
         if (this.GetComponent<Camera>().enabled)
         {
             _freeLookCamera.SetActive(true);
