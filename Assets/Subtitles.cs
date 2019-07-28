@@ -41,7 +41,7 @@ public class Subtitles : MonoBehaviour
 
     public void Empty()
     {
-
+        this.GetComponent<Text>().text = "";
     }
 
     public void PlayConversation(string name)
@@ -73,7 +73,7 @@ public class Subtitles : MonoBehaviour
     public void EnableAllInteractableObjects()
     {
         InteractableObject.EnableAllInteractableObjects();
-        Debug.Log("SHOULD ENABLE ALL OBJECTS!!");
+        //Debug.Log("SHOULD ENABLE ALL OBJECTS!!");
     }
 
     //public void DisableAllInteractableObjects()

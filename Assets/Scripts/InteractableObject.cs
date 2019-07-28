@@ -97,7 +97,7 @@ public class InteractableObject : MonoBehaviour
         {
             print(gameObject.name);        
             _focusCamera.GetComponent<Camera>().enabled = true;
-            GameObject.Find("FreeLookCameraRig").SetActive(false);
+            //GameObject.Find("FreeLookCameraRig").SetActive(false);
             _focusCamera.GetComponent<FocusCamera>().ChangeFinishedZoomEvent(m_OnZoomFinished);
             _focusCamera.GetComponent<FocusCamera>().FocusOnObject(this.gameObject.transform);
             ClearClicks();
