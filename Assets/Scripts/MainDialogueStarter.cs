@@ -13,6 +13,17 @@ public class MainDialogueStarter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (GameObject.Find("_VoiceSource").GetComponent<AudioSource>().isPlaying)
+        {
+            if (GameObject.Find("Director") != null)
+            {
+                Destroy(GameObject.Find("Director"));
+            }
+
+            if (GameObject.Find("Subtitles")!=null)
+            {
+                Destroy(GameObject.Find("Subtitles"));
+            }
+        }
     }
 }

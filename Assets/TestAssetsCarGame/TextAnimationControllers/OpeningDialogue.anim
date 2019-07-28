@@ -86,8 +86,22 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+  - time: 11.216666
+    functionName: EnableAllInteractableObjects
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 11.5
     functionName: NextLine
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 11.816667
+    functionName: CallAnalogStick
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

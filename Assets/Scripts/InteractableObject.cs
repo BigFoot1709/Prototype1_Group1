@@ -198,6 +198,7 @@ public class InteractableObject : MonoBehaviour
         foreach (GameObject i in _interactableObjects)
         {
             i.GetComponent<BoxCollider>().enabled = true;
+            Debug.Log("I HAVE ENABLED ALL INTERACTABLE OBJECTS");
         }
     }
 

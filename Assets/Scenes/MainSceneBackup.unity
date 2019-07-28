@@ -5702,7 +5702,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 335642948}
   m_LocalRotation: {x: 0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: 2.6001601, y: 1.9873126, z: -2.9115624}
+  m_LocalPosition: {x: 2.6001601, y: 1.9873126, z: -2.28}
   m_LocalScale: {x: 0.27684098, y: 0.27684098, z: 0.27684098}
   m_Children: []
   m_Father: {fileID: 0}
@@ -14948,7 +14948,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 7b71a71ac51cdc549936b132d7bdad1c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 50881b1ee454c4640a0804ff082efd9a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -17710,7 +17710,7 @@ BoxCollider:
   m_GameObject: {fileID: 1259967449}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 2.1985435, y: 0.57469845, z: 1}
   m_Center: {x: -0.012695886, y: -0.5327982, z: 1.1300571e-15}
@@ -20079,7 +20079,7 @@ BoxCollider:
   m_GameObject: {fileID: 1479026576}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 2.9649067, y: 1.6643033, z: 1}
   m_Center: {x: 0.15871851, y: -0.19552658, z: 2.1465977e-15}
@@ -26833,49 +26833,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1989638276}
   m_Mesh: {fileID: 4300000, guid: 0da5bcf6f7b04c948a4c33e0668b3f4b, type: 3}
---- !u!1 &1992143925
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1992143927}
-  - component: {fileID: 1992143926}
-  m_Layer: 0
-  m_Name: TutorialCaller
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1992143926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1992143925}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74d1c370a896aa34380048079b7bb486, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1992143927
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1992143925}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 310.83408, y: 141.18602, z: 61.54485}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 27
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1995060665
 GameObject:
   m_ObjectHideFlags: 0
@@ -27545,7 +27502,7 @@ Transform:
   m_LocalScale: {x: 2255.113, y: 2255.113, z: 2255.113}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2067600970
 GameObject:
@@ -28192,7 +28149,7 @@ BoxCollider:
   m_GameObject: {fileID: 2123938507}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 2.68, y: 16.67725, z: 5.0200014}
   m_Center: {x: -0.00000022111693, y: 7.5463614, z: -0.0000041225912}
@@ -29326,7 +29283,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &162112966649855760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35060,7 +35017,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a919b45f215b3d243847c7d53a614a4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myAnimatorController: {fileID: 9100000, guid: c5b7c0bffee4b354ca1a2376a5f6e489,
+  myAnimatorController: {fileID: 9100000, guid: 46c4fb280fed2784f85d0d69f2eb56de,
     type: 2}
 --- !u!114 &4513067897247649794
 MonoBehaviour:
@@ -35140,7 +35097,7 @@ Animator:
   m_GameObject: {fileID: 4513067897247649792}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c5b7c0bffee4b354ca1a2376a5f6e489, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9db18adbd54f57040837ecf068b951d4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
