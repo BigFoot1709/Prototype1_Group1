@@ -19,16 +19,16 @@ public class Subtitles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            PlayConversation("Harry Potter");
-        }
+        //if (Input.GetKeyDown(KeyCode.Return))
+        //{
+        //    PlayConversation("Harry Potter");
+        //}
     }
 
     public void NextLine()
     {
         this.GetComponent<Text>().text = _currLines[_index];
-        if (_index < _currLines.Count)
+        if (_index < _currLines.Count-1)
         {
             _index++;
         }
@@ -68,5 +68,23 @@ public class Subtitles : MonoBehaviour
         }
 
         return returnConvo;
+    }
+
+    public void EnableAllInteractableObjects()
+    {
+        InteractableObject.EnableAllInteractableObjects();
+        Debug.Log("SHOULD ENABLE ALL OBJECTS!!");
+    }
+
+    //public void DisableAllInteractableObjects()
+    //{
+    //    InteractableObject.DisableAllInteractableObjects();
+    //    Debug.Log("SHOULD DISABLE ALL OBJECTS!!");
+    //}
+
+    public void UnenableAllInteractableObjects()
+    {
+        InteractableObject.DisableAllInteractableObjects();
+        Debug.Log("SHOULD DISABLE ALL OBJECTS!!");
     }
 }

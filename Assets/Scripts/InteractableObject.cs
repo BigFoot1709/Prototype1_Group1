@@ -192,4 +192,20 @@ public class InteractableObject : MonoBehaviour
     {
         m_OnZoomFinished = zoom;
     }
+
+    public static void EnableAllInteractableObjects()
+    {
+        foreach (GameObject i in _interactableObjects)
+        {
+            i.GetComponent<BoxCollider>().enabled = true;
+        }
+    }
+
+    public static void DisableAllInteractableObjects()
+    {
+        foreach (GameObject i in _interactableObjects)
+        {
+            i.GetComponent<BoxCollider>().enabled = false;
+        }
+    }
 }
