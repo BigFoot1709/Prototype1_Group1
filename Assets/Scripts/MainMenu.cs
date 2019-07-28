@@ -17,4 +17,14 @@ public class MainMenu : MonoBehaviour
         quitDisp.SetActive(true);
         Application.Quit();
     }
+
+    private void Update() {
+        if (Input.GetButtonDown("Submit")) {
+            StartGame();
+        }
+
+        if (Input.GetButtonDown("Cancel")) {
+            QuitGame();
+        }
+    }
 }
